@@ -14,7 +14,7 @@ resource "aws_security_group" "main" {
     tags = merge(
         local.common_tags,
         {
-            Name = local.common_name
+            Name = "${var.project}-${var.environment}-${var.sg_name}"
         }
     )
         
